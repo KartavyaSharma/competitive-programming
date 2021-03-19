@@ -1,2 +1,2 @@
 # competitive-programming
-All things related to my competitive programming journey
+A code basae for all competitive programming problems I have attempted.
