@@ -1,0 +1,79 @@
+<snippet>
+	<content><![CDATA[
+#include <bits/stdc++.h>
+#include <chrono>
+
+using namespace std;
+
+#define FAST ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+
+typedef long long ll;
+typedef unsigned long long ull;
+typedef unsigned long long int ulli;
+typedef long double ld;
+
+#define ar array
+#define endl "\n"
+
+#define sz(x) (int)x.size()
+#define all(x) x.begin(), x.end()
+#define pb push_back
+#define mp make_pair
+#define S second
+#define F first
+#define Ima INT_MAX
+#define Imi INT_MIN
+
+#define vvi vector<vector<int>>
+#define vvii vector<vector<pii>>
+#define pii pair<int,int>
+#define vi vector<int>
+#define vl vector<long>
+#define vii vector<pii>
+#define vs vector<string>
+
+#define mi map<int,int>
+#define mii map<pii,int>
+
+#define f(i,a,b) for(ll i=a; i<b; i++)
+#define f0(i,a) for(ll i=0; i<a; i++)
+#define rf(i,a,b) for(ll i=b; i>=a; i--)
+#define rf0(i,a) for(ll i=a; i>=0; i--)
+#define fa(a) for(auto x:a) cout << x << ' ';
+#define tr(it, a) for(auto it=a.begin(); it!=a.end(); it++)
+#define it(x,a) for(auto x:a)
+#define wt(t) while(t--)
+
+#define possibilities(x) while(next_permutation(all(x)))
+#define getunique(v) {sort(v.begin(), v.end()); v.erase(unique(v.begin(), v.end()), v.end());}
+
+#define PI 3.1415926535897932384626
+
+void setIO(string name = "") {
+	FAST;
+	if(sz(name)) {
+		freopen((name+".in").c_str(), "r", stdin);
+		freopen((name+".out").c_str(), "w", stdout);
+	}
+}
+
+const int mxN = 1e6 + 14000;
+const ll mod = 1e9+7;
+
+ll arr[mxN];
+
+void solve() {
+	
+}
+
+int main() {
+	FAST;
+	solve();
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+	<tabTrigger>gen</tabTrigger>
+</snippet>
