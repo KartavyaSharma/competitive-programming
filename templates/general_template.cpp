@@ -44,13 +44,28 @@ typedef long double ld;
 
 #define possibilities(x) while(next_permutation(all(x)))
 #define getunique(v) {sort(v.begin(), v.end()); v.erase(unique(v.begin(), v.end()), v.end());}
+#define isthere(v, e) binary_search(all(v), e)
 
 #define PI 3.1415926535897932384626
+
+int search(ll *param, ll size, ll value) {
+	int idx = 0;
+	for(int jump = size/2; jump >= 1; jump /= 2) {
+		while(idx+jump < size && param[idx+jump] <= value) idx += jump;
+	}
+	if(param[idx] == value) return idx;
+	return -1;
+}
+
+int elements(int *param, ll size, ll value) {
+	auto r = equal_range(param, param+size, value);
+	return r.S-r.F;
+}
 
 // #define kickstart true
 
 //#define usaco true
-//#define id //"{replace w/ problem IO}""
+//#define id "{replace w/ problem IO}"
 
 void setIO(string name = "") {
 	FAST;
@@ -73,45 +88,30 @@ int main() {
 
 	#ifdef kart_local
 		auto start = std::chrono::steady_clock::now();
-		#ifdef usaco
-			string name; cin >> name;
-			setIO(name);
+	#endif
+
+	#ifdef usaco
+		setIO(id);
+		solve();
+	#elif defined(kickstart)
+		FAST;
+		int t, i = 1;
+		cin >> t;
+		wt(t) {
+			cout << "Case #" << i << ": ";
 			solve();
-		#elif defined(kickstart)
-			FAST;
-			int t, i = 1;
-			cin >> t;
-			wt(t) {
-				cout << "Case #" << i << ": ";
-				solve();
-				i++;
-			}
-		#else
-			FAST;
-			int t; cin >> t;
-			f0(i,t) solve();
-		#endif
-		
+			i++;
+		}
+	#else
+		FAST;
+		int t = 1; 
+		//cin >> t;
+		f0(i,t) solve();
+	#endif
+
+	#ifdef kart_local
 		auto end = std::chrono::steady_clock::now();
 		std::chrono::duration<double> elapsed = end-start;
 		cout << endl << "+++++++++++++" << endl << "Elapsed time: " << elapsed.count() << " seconds";
-	#else
-		#ifdef usaco
-			setIO(id);
-			solve();
-		#elif defined(kickstart)
-			FAST;
-			int t, i = 1;
-			cin >> t;
-			wt(t) {
-				cout << "Case #" << i << ": ";
-				solve();
-				i++;
-			}
-		#else
-			FAST;
-			int t; cin >> t;
-			f0(i,t) solve();
-		#endif
 	#endif
 }
