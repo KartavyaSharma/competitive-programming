@@ -48,7 +48,7 @@ typedef long double ld;
 
 #define PI 3.1415926535897932384626
 
-int search(ll *param, ll size, ll value) {
+template <typename T> ll search(T *param, ll size, T value) {
 	int idx = 0;
 	for(int jump = size/2; jump >= 1; jump /= 2) {
 		while(idx+jump < size && param[idx+jump] <= value) idx += jump;
@@ -57,6 +57,7 @@ int search(ll *param, ll size, ll value) {
 	return -1;
 }
 
+
 int elements(int *param, ll size, ll value) {
 	auto r = equal_range(param, param+size, value);
 	return r.S-r.F;
@@ -64,8 +65,8 @@ int elements(int *param, ll size, ll value) {
 
 // #define kickstart true
 
-//#define usaco true
-//#define id "{replace w/ problem IO}"
+// #define usaco true
+// #define id "tttt"
 
 void setIO(string name = "") {
 	FAST;
@@ -79,6 +80,7 @@ const int mxN = 1e6 + 14000;
 const ll mod = 1e9+7;
 
 ll arr[mxN];
+ll n;
 
 void solve() {
 	
