@@ -66,7 +66,7 @@ int elements(int *param, ll size, ll value) {
 // #define kickstart true
 
 // #define usaco true
-// #define id "tttt"
+// #define id "cowsignal"
 
 void setIO(string name = "") {
 	FAST;
@@ -80,8 +80,7 @@ const int mxN = 1e6 + 14000;
 const ll mod = 1e9+7;
 
 ll arr[mxN];
-ll n;
-
+ 
 void solve() {
 	
 }
@@ -91,6 +90,8 @@ int main() {
 	#ifdef kart_local
 		auto start = std::chrono::steady_clock::now();
 	#endif
+	
+	// iota(arr, arr+mxN, 1);
 
 	#ifdef usaco
 		setIO(id);
@@ -107,7 +108,7 @@ int main() {
 	#else
 		FAST;
 		int t = 1; 
-		//cin >> t;
+		// cin >> t;
 		f0(i,t) solve();
 	#endif
 
