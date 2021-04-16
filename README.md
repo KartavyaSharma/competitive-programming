@@ -1,2 +1,2 @@
 # competitive-programming
-A code basae for all competitive programming problems I have attempted.
+A code base for all competitive programming problems I have attempted.
